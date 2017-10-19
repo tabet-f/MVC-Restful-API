@@ -1397,9 +1397,7 @@ private void processPatchRequest(String userid, String subkey, String originalme
 		 }
 		  
 	    
-/****** REVIEWD ******/
-/** SAME METHOD AS JACKSONPARSER() but filename & path are different for Put File instead of POST File 
- * EVERYTING ELSE IS 100% THE SAME AS Method called JacksonParse() found above ***/	    
+/****** REVIEWD ******/    
 //Parse Json File & Store it into REDIS (USED IN POST REQUEST) when user post a json documents to the api
 private void ProcessPUTRequest(String OldMainKeyToBeDeleted) throws IOException {  
 	 
@@ -1444,7 +1442,7 @@ private void ProcessPUTRequest(String OldMainKeyToBeDeleted) throws IOException 
 				}
      	       }
      	        //So if new put doc has different main key that the old one 
-     	        //STOP EXECTION NO DELETE WIL HAPPEN AND NO ADDITION OF THE NEW DOC WILL HAPPEN
+     	        //STOP EXECTION NO DELETE WILL HAPPEN AND NO ADDITION OF THE NEW DOC WILL HAPPEN
      	        else{
      	         addResponse(false, "Not Allowed To Change Doc Main Key on Put Request");
      	         return;
